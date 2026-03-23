@@ -1,0 +1,18 @@
+﻿@model DuendeIdentityServer.ViewModels.DuendeConfigViewModel
+
+<h1>Duende IndentityServer</h1>
+<hr />
+@if (Model != null && Model.TestUsers != null && Model.TestUsers.Count() > 0)
+{
+    <h3>TestUsers</h3>
+    <table>
+        <tr><th>SubjectId</th><th>Username</th></tr>
+        @foreach (var testUser in Model.TestUsers)
+        {
+            <tr>
+                <td>@testUser.SubjectId</td>
+                <td>@testUser.Username</td>
+            </tr>
+        }
+    </table>
+}

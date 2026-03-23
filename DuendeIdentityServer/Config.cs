@@ -60,6 +60,20 @@ namespace DuendeIdentityServer
                         new Claim("email", "ben@pxl.be"),
                         new Claim("name", "Ben")
                     }
+                },
+                new TestUser
+                {
+                    SubjectId = "2",
+                    Username = "Tolga",
+                    Password = "Tolga",
+                    Claims =
+                    {
+                        new Claim("sub", "2"),
+                        new Claim("given_name", "Tolga"),
+                        new Claim("family_name", "Guclu"),
+                        new Claim("email", "tlg@pxl.be"),
+                        new Claim("name", "Tolga")
+                    }
                 }
             };
     }

@@ -129,10 +129,10 @@ namespace HrApp.Controllers
                 }
             }
 
-            var claim = externalLoginInfo.Principal.FindFirst("email");
+            //var claim = externalLoginInfo.Principal.FindFirst("email");
             if (emailClaim != null)
             {
-                var email = claim.Value;
+                var email = emailClaim.Value;
                 var user = await _userManager.FindByEmailAsync(email);
                 if (user == null)
                 {
